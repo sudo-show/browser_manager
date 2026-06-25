@@ -6,7 +6,7 @@ randomizes the user agent per page, and guarantees cleanup even on exception.
 ## Install
 
 ```bash
-pip install git+https://github.com/yourname/browser_manager.git
+pip install git+https://github.com/sudo-show/browser_manager.git
 ```
 
 ## Usage

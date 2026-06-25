@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "browser_manager"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Async Playwright browser lifecycle helper"
 requires-python = ">=3.10"
 dependencies = [
@@ -13,3 +13,5 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 include = ["browser_manager*"]
+
+[tool.setuptools_scm]
