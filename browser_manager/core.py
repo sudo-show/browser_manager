@@ -50,8 +50,10 @@ async def new_context(browser: Browser, user_agent: str | None = None) -> Browse
     return context
 
 
-async def new_page(context: BrowserContext) -> Page:
-    """Open a new page inside an existing context."""
+async def new_page(context: BrowserContext, default_timeout: int) -> Page:
+    """Open a new page inside an existing context. Set default timeout in seconds."""
     page = await context.new_page()
+    if default_timeout:
+        page.set_default_timeout(default_timout*1000)
     logger.debug("Page created.")
     return page
