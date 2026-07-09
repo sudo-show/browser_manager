@@ -54,6 +54,6 @@ async def new_page(context: BrowserContext, default_timeout: int = 30) -> Page:
     """Open a new page inside an existing context. Set default timeout in seconds."""
     page = await context.new_page()
     if default_timeout:
-        page.set_default_timeout(default_timout*1000)
+        page.set_default_timeout(default_timeout*1000)
     logger.debug("Page created.")
     return page
